@@ -49,9 +49,9 @@
              android:name="com.baidu.speech.SECRET_KEY"
              android:value="DZE4CUgm1yZZhKuhkYG8zAUC3XUbiZrp" />
         <!-- 请确认集成后的包名是否正确，本demo的包名是com.baidu.speech.recognizerdemo，在build.gradle文件中查看 -->
-         <service
+         <!--<service
              android:name="com.baidu.speech.VoiceRecognitionService"
-             android:exported="false" />
+             android:exported="false" />-->
 
          <activity
              android:name="com.baidu.android.voicedemo.activity.ActivityMain"
@@ -73,6 +73,16 @@
                  <category android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE" />
              </intent-filter>
          </activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.activity.ActivityMyOffline"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:label="自定义离线"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
          <activity
              android:name="com.baidu.android.voicedemo.activity.ActivityOffline"
              android:configChanges="orientation|keyboardHidden|screenLayout"

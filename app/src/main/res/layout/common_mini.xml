@@ -43,5 +43,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:onClick="onClick"
-        android:text="开始" />
+        android:text="开-始" />
 </LinearLayout>

@@ -58,6 +58,8 @@ public class RecogEventAdapter implements EventListener {
             // 临时识别结果, 长语音模式需要从此消息中取出结果
             String[] results = recogResult.getResultsRecognition();
             if (recogResult.isFinalResult()) {
+                final String recogStr = (results.length==0)?"null":results[0];
+                Log.i(TAG, "--->" + recogStr);
                 listener.onAsrFinalResult(results, recogResult);
             } else if (recogResult.isPartialResult()) {
                 listener.onAsrPartialResult(results, recogResult);
